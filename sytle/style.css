@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 24px;
+}
+td {
+  width: 100px;
+  height: 100px;
+}
+table {
+  margin: 5px auto;
+  text-align: center;
+}
+
+td {
+    background-color: #ccc;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: #999;
+}
+
+.info {
+    text-align: center;
+}
+
+.btns {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.play {
+    width: 145px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.play:hover {
+    background-color: #ccc;
+} 
