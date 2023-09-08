@@ -122,8 +122,8 @@ function Game(playerOne,playerTwo) {
 
     const getBoard = () => board.getBoard();
 
-    const getPlayer = (player) => {
-        return players[player];
+    const resetPlayer = () => {
+        currentPlayer = players[0];
     };
 
     return {
@@ -133,7 +133,7 @@ function Game(playerOne,playerTwo) {
         getWinner,
         getBoard,
         checkDraw,
-        getPlayer
+        resetPlayer
     };
 }
 
@@ -142,12 +142,11 @@ function GameUI(){
 
     const game = Game('player 1', 'player 2');
     const board = game.getBoard();
-    let currentPlayer = game.getCurrentPlayer();
 
     const player = document.querySelector('.player-name');
 
     const render = () => {
-        player.innerHTML = `${currentPlayer.symbol}'s turn`;
+        player.innerHTML = `${game.getCurrentPlayer().symbol}'s turn`;
         for (let i = 0; i < board.length; i++)
             for (let j = 0; j < board.length; j++)
                 document.getElementById(`${i}${j}`).innerHTML = board[i][j].getState();
@@ -164,7 +163,6 @@ function GameUI(){
                 if (board[row][column].getState() != ' ' || game.getWinner() != null || game.checkDraw())
                     return;
                 game.play(row, column);
-                currentPlayer = game.getCurrentPlayer();
                 render();
                 if (game.getWinner() != null) {
                     const winner = game.getWinner();
@@ -185,7 +183,7 @@ function GameUI(){
                 board[i][j].setState(' ');
                 document.getElementById(`${i}${j}`).innerHTML = ' ';
             }
-        currentPlayer = game.getPlayer(0);
+        game.resetPlayer();
         render();
     };
 
