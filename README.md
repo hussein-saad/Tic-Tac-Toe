@@ -8,6 +8,7 @@ A simple web-based implementation of the classic game Tic-Tac-Toe.
 - [Demo](#demo)
 - [Features](#features)
 - [How to Play](#how-to-play)
+- [Acknowledgements](#acknowledgements)
 
 ## About
 
@@ -33,3 +34,8 @@ You can see a live demo of the game here: [https://hussein-saad.github.io/Tic-Ta
 3. Click on an empty cell to place your symbol ('X' or 'O').
 4. The game will continue until one player wins by getting three of their symbols in a row (horizontally, vertically, or diagonally) or if the grid is completely filled without a winner, resulting in a draw.
 5. After the game ends, you can choose to play another round by clicking the "play" button.
+
+
+## Acknowledgements
+
+The **Tic Tac Toe** project was created as part of The Odin Project curriculum.
