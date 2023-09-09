@@ -16,7 +16,7 @@ This repository contains a web-based implementation of Tic-Tac-Toe, a classic tw
 
 ## Demo
 
-You can see a live demo of the game here: [https://hussein-saad.github.io/Tic-Tac-Toe](#)
+You can see a live demo of the game [here](https://hussein-saad.github.io/Tic-Tac-Toe)
 
 ## Features
 
